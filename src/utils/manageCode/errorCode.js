@@ -1,0 +1,35 @@
+import { generateCode } from "../functions";
+
+export const errorCode = {
+    missingBodyKey: generateCode(401, "Thiếu body key"),
+    missingParamKey: generateCode(402, "Thiếu param key"),
+    getAllData: generateCode(403, "Lấy tất cả data"),
+    getDataByMonthAndYear: generateCode(404, "Lấy data theo tháng và năm"),
+    getDataByDayMonthAndYear: generateCode(405, "Lấy data theo ngày tháng và năm"),
+    getCheckedDayByMonthAndYear: generateCode(406, "Lấy ngày theo tháng và năm"),
+    createDataByDayMonthAndYear: generateCode(407, "Thêm data theo ngày tháng và năm"),
+    updateDataByDayMonthAndYear: generateCode(408, "Cập nhật data theo ngày tháng và năm"),
+
+    userNameNotExist: generateCode(404, "Username does not exist"),
+    incorrectPassword: generateCode(405, "Incorrect password"),
+    generateAccessToken: generateCode(406, "Error in generate access token"),
+    generateRefreshToken: generateCode(407, "Error in generate refresh token"),
+    missingAccessToken: generateCode(408, "Missing access token"),
+    missingRefreshToken: generateCode(409, "Missing refresh token"),
+    accessTokenIlligal: generateCode(410, "Access token illigal"),
+    refreshTokenIlligal: generateCode(411, "Refresh token illigal"),
+    userNotFound: generateCode(412, "User not found"),
+    accessTokenExpired: generateCode(413, "Access token expired"),
+    refreshTokenExpired: generateCode(414, "Refresh token expired"),
+    updateProfileFail: generateCode(415, "Update user profile fail"),
+    updateUserPasswordFail: generateCode(416, "Update user password fail"),
+    updateUserBestScoreFail: generateCode(417, "Update user best score fail"),
+    sendMailFail: generateCode(418, "Send mail fail"),
+    gmailNotFound: generateCode(419, "Gmail not found"),
+    resetPasswordFail: generateCode(420, "Reset password fail"),
+    gmailExisted: generateCode(421, "This gmail already used"),
+    getRankListFail: generateCode(422, "Can not get rank list"),
+    fullNameExisted: generateCode(423, "This fullname already used"),
+    getMailTokenFail: generateCode(425, "Can not get mail token"),
+};
+
