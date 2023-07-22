@@ -1,6 +1,6 @@
 # Description
 
-Is the server of the game Flappy Bird
+Is the server of Peachee Note
 
 # To run this project, follow these step
 
