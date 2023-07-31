@@ -55,7 +55,15 @@ let getCheckedDayByMonthAndYear = async (req, res) => {
         return res.status(400).json(generateResponeData(errorCode.getCheckedDayByMonthAndYear));
     }
 
-    return res.status(200).json(generateResponeData(successCode.getCheckedDayByMonthAndYear, datas.length > 0 ? datas.map((item) => item.day) : null));
+    let newDatas = datas.filter((item) => {
+        let objData = JSON.parse(item.data);
+        if (objData.classNoteArrValue.length > 0 || objData.noteValue !== "<p><br></p>") {
+            return true;
+        }
+        return false;
+    });
+
+    return res.status(200).json(generateResponeData(successCode.getCheckedDayByMonthAndYear, newDatas.length > 0 ? newDatas.map((item) => item.day) : null));
 };
 
 let createDataByDayMonthAndYear = async (req, res) => {

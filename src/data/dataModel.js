@@ -40,7 +40,7 @@ const getDataByDayMonthAndYear = async (day, month, year) => {
 
 const getCheckedDayByMonthAndYear = async (month, year) => {
     try {
-        let [dataRows] = await pool.execute(`select day from ${TABLE_NAME} where month = ? and year = ?`, [month, year]);
+        let [dataRows] = await pool.execute(`select day, data from ${TABLE_NAME} where month = ? and year = ?`, [month, year]);
 
         return dataRows;
     }
